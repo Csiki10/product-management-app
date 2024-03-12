@@ -14,12 +14,20 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
+import { NavigationComponent } from './navigation/navigation.component';
+import {MatMenuModule} from '@angular/material/menu';
+import { EditProductComponent } from './edit-product/edit-product.component';
+import { FooterComponent } from './footer/footer.component';
+import {MatDividerModule} from '@angular/material/divider';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
-    AddProductComponent 
+    AddProductComponent,
+    NavigationComponent,
+    EditProductComponent,
+    FooterComponent 
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,9 @@ import { FormsModule } from '@angular/forms';
     MatInputModule,
     MatButtonModule,
     MatFormFieldModule,
-    FormsModule
+    FormsModule,
+    MatMenuModule,
+    MatDividerModule
   ],
   providers: [ HttpClientModule],
   bootstrap: [AppComponent]

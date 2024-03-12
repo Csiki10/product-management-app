@@ -1,0 +1,31 @@
+<div class="d-flex justify-content-between align-items-center my-4">
+  <h1 class="m-0">
+    Edit Product
+  </h1>
+  <button mat-button
+    routerLink="/products">
+    Bact to Products
+  </button>
+</div>
+<form (ngSubmit)="onSubmit()" #productForm="ngForm">
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Name" name="name" [(ngModel)]="product.name" required>
+      <mat-error *ngIf="productForm.controls['name'].invalid && (productForm.controls['name'].dirty || productForm.controls['name'].touched)">
+        Name is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput placeholder="Description" name="description" [(ngModel)]="product.description" required>
+      <mat-error *ngIf="productForm.controls['description'].invalid && (productForm.controls['description'].dirty || productForm.controls['description'].touched)">
+        Description is required
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <input matInput type="number" placeholder="Price" name="price" [(ngModel)]="product.price" required>
+      <mat-error *ngIf="productForm.controls['price'].invalid && (productForm.controls['price'].dirty || productForm.controls['price'].touched)">
+        Price is required
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit" [disabled]="productForm.invalid">Update Product</button>
+  </form>
+  

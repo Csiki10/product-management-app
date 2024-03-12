@@ -26,12 +26,16 @@ export class ProductListComponent implements OnInit {
       this.products = products;
     });
   }
-
+  
   deleteProduct(product: Product): void {
     const confirmationSnackBar = this.snackBar.open(
       `Are you sure you want to delete ${product.name}?`, 
       'Yes', 
-      { duration: 5000 }
+      { 
+        duration: 5000,
+        horizontalPosition: 'center',
+        verticalPosition: 'top'
+      }
     );
 
     confirmationSnackBar.onAction().subscribe(() => {
