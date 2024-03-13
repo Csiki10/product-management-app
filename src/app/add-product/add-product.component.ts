@@ -40,7 +40,7 @@ export class AddProductComponent {
           panelClass: ['success-snackbar']
         });
         this.resetForm();  
-        // this.router.navigate(['/products']);     
+        this.router.navigate(['/products']);     
       },
       error => {
         console.log("asd")

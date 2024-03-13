@@ -31,11 +31,7 @@ export class ProductListComponent implements OnInit {
     const confirmationSnackBar = this.snackBar.open(
       `Are you sure you want to delete ${product.name}?`, 
       'Yes', 
-      { 
-        duration: 5000,
-        horizontalPosition: 'center',
-        verticalPosition: 'top'
-      }
+      { duration: 5000 }
     );
 
     confirmationSnackBar.onAction().subscribe(() => {
